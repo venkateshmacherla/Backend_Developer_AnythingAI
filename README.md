@@ -1,99 +1,137 @@
 # AnythingAI Task Manager
 
-A full-stack Task Manager application built using:
-
-- **Frontend:** React.js + Material UI  
-- **Backend:** Node.js + Express.js  
-- **Architecture:** REST API  
+This is a simple full-stack task manager application built using React on the frontend and Node.js with Express on the backend. It allows users to register, log in, and manage their tasks through a clean interface and REST APIs.
 
 ---
 
 ## Project Structure
 
-
+```
 ANYTHINGAI/
 │
 ├── backend/
-│ ├── controllers/
-│ │ └── taskController.js
-│ ├── middleware/
-│ ├── models/
-│ ├── routes/
-│ ├── .env
-│ ├── app.js
-│ ├── dataStore.js
-│ ├── package.json
+│   ├── controllers/
+│   │   └── taskController.js
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── .env
+│   ├── app.js
+│   ├── dataStore.js
+│   ├── package.json
 │
 ├── frontend/
-│ ├── public/
-│ ├── src/
-│ │ ├── components/
-│ │ │ ├── Login.js
-│ │ │ ├── Register.js
-│ │ │ ├── Tasks.js
-│ │ │
-│ │ ├── App.js
-│ │ ├── App.css
-│ │ ├── index.js
-│ │ ├── index.css
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Login.js
+│   │   │   ├── Register.js
+│   │   │   ├── Tasks.js
+│   │   ├── App.js
+│   │   ├── App.css
+│   │   ├── index.js
+│   │   ├── index.css
 │
 └── README.md
-
+```
 
 ---
 
 ## Backend Setup
 
-### 1. Navigate to backend
+First, go into the backend folder:
+
 ```bash
 cd backend
-2. Install dependencies
-npm install express cors
-3. Run server
-node app.js
+```
 
-Backend runs at:
+Install the required dependencies:
+
+```bash
+npm install express cors
+```
+
+Then start the server:
+
+```bash
+node app.js
+```
+
+The backend will run at:
 http://localhost:5000
 
-Frontend Setup
-1. Navigate to frontend
+---
+
+## Frontend Setup
+
+Now move to the frontend folder:
+
+```bash
 cd frontend
-2. Install dependencies
+```
+
+Install dependencies:
+
+```bash
 npm install
 npm install axios @mui/material @emotion/react @emotion/styled @mui/icons-material
-3. Run frontend
-npm start
+```
 
-Frontend runs at:
+Start the React app:
+
+```bash
+npm start
+```
+
+The frontend will run at:
 http://localhost:3000
 
-Features
-User Registration & Login
-Create Tasks
-View Tasks
-Update Tasks
-Delete Tasks
+---
 
-Usage
-Register a new user
-Login using credentials
-Manage tasks (Add / Edit / Delete)
-API Endpoints
-Method	Endpoint	Description
-POST	/api/v1/tasks	Create task
-GET	/api/v1/tasks	Get all tasks
-GET	/api/v1/tasks/:id	Get single task
-PUT	/api/v1/tasks/:id	Update task
-DELETE	/api/v1/tasks/:id	Delete task
+## What You Can Do
 
-Tech Stack
-Node.js
-Express.js
-React.js
-Material UI
-Axios
+* Create a new account and log in
+* Add new tasks
+* View all your tasks
+* Edit existing tasks
+* Delete tasks
 
-Notes
-Ensure backend is running before frontend
-Configure .env if needed
-Update API base URL for deployment
+---
+
+## How It Works
+
+Once you log in, you can start managing your tasks. All task operations (create, read, update, delete) are handled through REST APIs built in the backend.
+
+---
+
+## API Endpoints
+
+| Method | Endpoint          | Description   |
+| ------ | ----------------- | ------------- |
+| POST   | /api/v1/tasks     | Create a task |
+| GET    | /api/v1/tasks     | Get all tasks |
+| GET    | /api/v1/tasks/:id | Get one task  |
+| PUT    | /api/v1/tasks/:id | Update a task |
+| DELETE | /api/v1/tasks/:id | Delete a task |
+
+---
+
+## Tech Stack
+
+* Node.js
+* Express.js
+* React.js
+* Material UI
+* Axios
+
+---
+
+## Notes
+
+* Make sure the backend server is running before starting the frontend
+* You can use a `.env` file for configuration if needed
+* Update API URLs if you deploy the project
+
+---
+
+This project is built for learning and demonstration purposes and can be extended further with features like authentication tokens, database integration, and deployment.
